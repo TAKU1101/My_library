@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tsugita <tsugita@student.42tokyo.j>        +#+  +:+       +#+        */
+/*   By: tsugita <tsugita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/06 17:08:28 by tsugita           #+#    #+#             */
-/*   Updated: 2020/10/06 17:11:28 by tsugita          ###   ########.fr       */
+/*   Created: 2021/03/11 03:34:03 by tsugita           #+#    #+#             */
+/*   Updated: 2021/03/11 03:34:03 by tsugita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+int ft_isspace(char c)
 {
-	return (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'));
+    return (('\t' <= c && c <= '\r') || c == ' ');
 }
