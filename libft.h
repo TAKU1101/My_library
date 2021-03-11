@@ -51,6 +51,7 @@ int					ft_isupper(int c);
 int					ft_islower(int c);
 int					ft_iscntrl(int c);
 int					ft_isblank(int c);
+int					ft_ispunct(int c);
 void				*ft_calloc(size_t count, size_t size);
 char				*ft_strdup(const char *s1);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
