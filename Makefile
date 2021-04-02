@@ -18,6 +18,7 @@ SRCS += ${shell find ./string -type f -name "*.c"}
 SRCS += ${shell find ./strings -type f -name "*.c"}
 SRCS += ${shell find ./stdlib -type f -name "*.c"}
 SRCS += ${shell find ./ori -type f -name "*.c"}
+SRCS += ${shell find ./stdio/ft_printf -type f -name "*.c"}
 
 BONUS_OBJS = $(BONUS:.c=.o)
 
