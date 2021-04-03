@@ -54,8 +54,8 @@ return value: the cut string
 
 int	ft_isintoverflow(const char *str)
 
-Check that the number in the string does not overflow the int type.
-str: The number in the string
+Check that the number in the string does not overflow the int type.  
+str: The number in the string  
 return value: 1 if the number overflows
 
 ### ft_put*_fd
