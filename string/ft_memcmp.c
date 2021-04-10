@@ -2,8 +2,8 @@
 
 int	ft_memcmp(const void *buf1, const void *buf2, size_t len)
 {
-	const char *p1;
-	const char *p2;
+	const char	*p1;
+	const char	*p2;
 
 	p1 = buf1;
 	p2 = buf2;

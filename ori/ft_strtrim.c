@@ -11,7 +11,7 @@ static int	set_in_char(int c, const char *set)
 	return (0);
 }
 
-char		*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	unsigned int	start;
 	unsigned int	end;

@@ -24,7 +24,7 @@ static int	int_len(int n)
 
 static char	*set_num(long num, char *s)
 {
-	int n;
+	int	n;
 
 	n = num % 10;
 	if (num)
@@ -36,7 +36,7 @@ static char	*set_num(long num, char *s)
 	return (s);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	int		len;
 	long	long_n;
@@ -44,7 +44,8 @@ char		*ft_itoa(int n)
 	char	*p;
 
 	len = int_len(n);
-	if (!(num = (char *)malloc(sizeof(char) * (len + 1))))
+	num = (char *)malloc(sizeof(char) * (len + 1));
+	if (!num)
 		return (0);
 	p = num;
 	num[len] = '\0';

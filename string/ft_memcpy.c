@@ -2,7 +2,7 @@
 
 void	*ft_memcpy(void *dest, const void *srcs, size_t len)
 {
-	char *p;
+	char	*p;
 
 	p = dest;
 	if (dest == (void *)0 && srcs == (void *)0)

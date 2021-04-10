@@ -9,9 +9,12 @@ static char	**set_point_malloc(char const *str, char c)
 	i = -1;
 	count = 0;
 	while (str[++i])
-		(!(str[i] == c) && ((str[i + 1] == c) \
-					|| (str[i + 1] == '\0'))) ? (count++) : 0;
-	if (!(p = (char **)malloc(sizeof(char *) * (count + 1))))
+	{
+		if (!(str[i] == c) && ((str[i + 1] == c) || (str[i + 1] == '\0')))
+			count++;
+	}
+	p = (char **)malloc(sizeof(char *) * (count + 1));
+	if (!p)
 		return (0);
 	p[count] = 0;
 	return (p);
@@ -24,18 +27,21 @@ static char	**set_malloc(char const *str, char c)
 	int		k;
 	char	**p;
 
-	if (!(p = set_point_malloc(str, c)))
+	p = set_point_malloc(str, c);
+	if (!p)
 		return (0);
 	i = -1;
 	j = -1;
 	k = 0;
 	while (str[++i])
 	{
-		(str[i] == c && !(str[i + 1] == c)) ? j = i : 0;
+		if (str[i] == c && !(str[i + 1] == c))
+			j = i;
 		if (!(str[i] == c) && ((str[i + 1] == c)\
 			|| (str[i + 1] == '\0')))
 		{
-			if (!(p[k++] = (char *)malloc(sizeof(char *) * (i - j + 1))))
+			p[k++] = (char *)malloc(sizeof(char *) * (i - j + 1));
+			if (!p[k])
 				return (0);
 			p[k - 1][i - j] = '\0';
 		}
@@ -43,7 +49,7 @@ static char	**set_malloc(char const *str, char c)
 	return (p);
 }
 
-char		**ft_split(char const *str, char c)
+char	**ft_split(char const *str, char c)
 {
 	char	**p;
 	int		i;

@@ -10,9 +10,14 @@ size_t	ft_strlcpy(char *dest, const char *srcs, size_t len)
 	sp = srcs;
 	n = len;
 	if (n != 0)
+	{
 		while (--n > 0)
-			if ((*dp++ = *sp++) == '\0')
+		{
+			*dp++ = *sp++;
+			if (*dp == '\0')
 				break ;
+		}
+	}
 	if (n == 0)
 	{
 		if (len != 0)

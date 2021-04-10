@@ -2,7 +2,7 @@
 
 static int	num_len(const char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (ft_isdigit(*(str++)))
@@ -26,7 +26,7 @@ static	int	detection_overflow(const char *str, char ov[])
 	return (1);
 }
 
-int			ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	long	ans;
 	long	sign;

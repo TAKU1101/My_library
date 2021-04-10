@@ -2,7 +2,7 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	const char *p;
+	const char	*p;
 
 	p = str;
 	while (*p)

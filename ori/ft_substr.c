@@ -2,8 +2,8 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *str;
-	char *ptr;
+	char	*str;
+	char	*ptr;
 
 	str = (char *)malloc((len + 1) * sizeof(char));
 	if (!str)
